@@ -119,7 +119,7 @@ function App() {
         </svg>
       </div>
       {showContent && (
-        <div className="main w-full rotate-[-10deg] scale-[1.7]" style={{ fontFamily: 'Pricedown' }}>
+        <div className="main w-full rotate-[-10deg] scale-[1.7]">
           <div className="landing overflow-hidden relative w-full h-screen bg-black">
             <div className="navbar absolute top-0 left-0 z-[10] w-full py-10 px-10">
               <div className="logo flex gap-7">
@@ -145,7 +145,7 @@ function App() {
                 src="/GTA-VI/bg.png"
                 alt=""
               />
-              <div className="text text-white flex flex-col gap-3 absolute top-20 left-1/2 -translate-x-1/2 scale-[1.4] rotate-[-10deg]">
+              <div className="text text-white flex flex-col gap-3 absolute top-20 left-1/2 -translate-x-1/2 scale-[1.4] rotate-[-10deg]" style={{ fontFamily: 'Pricedown' }}>
                 <h1 className="text-[10rem] leading-none -ml-30">grand</h1>
                 <h1 className="text-[10rem] leading-none ml-10">theft</h1>
                 <h1 className="text-[10rem] leading-none -ml-30">auto</h1>
