@@ -19,11 +19,10 @@ function App() {
       delay: -1.8,
       ease: "Expo.easeInOut",
       transformOrigin: "50% 50%",
-      opacity: 0,
-      onComplete: () => {
-  			document.querySelector(".svg")?.remove();
-  			setShowContent(true);
-			},
+      opacity: 0,onComplete: () => {
+        document.querySelector(".svg")?.remove();
+        setShowContent(true);
+      },
     });
   });
 
@@ -120,7 +119,7 @@ function App() {
         </svg>
       </div>
       {showContent && (
-        <div className="main w-full rotate-[-10deg] scale-[1.7]">
+        <div className="main w-full rotate-[-10deg] scale-[1.7]" style={{ fontFamily: 'Pricedown' }}>
           <div className="landing overflow-hidden relative w-full h-screen bg-black">
             <div className="navbar absolute top-0 left-0 z-[10] w-full py-10 px-10">
               <div className="logo flex gap-7">
@@ -152,7 +151,7 @@ function App() {
                 <h1 className="text-[10rem] leading-none -ml-30">auto</h1>
               </div>
               <img
-                className="absolute character -bottom-[150%] left-1/2 -translate-x-1/2  scale-[3] rotate-[-20deg]"
+                className="absolute character bottom-[-40%] left-1/2 -translate-x-1/2 scale-[2] rotate-[-10deg]"
                 src="/GTA-VI/girlbg.png"
                 alt=""
               />
