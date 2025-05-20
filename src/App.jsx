@@ -20,13 +20,10 @@ function App() {
       ease: "Expo.easeInOut",
       transformOrigin: "50% 50%",
       opacity: 0,
-      onUpdate: function () {
-        if (this.progress() >= 0.9) {
-          document.querySelector(".svg").remove();
-          setShowContent(true);
-          this.kill();
-        }
-      },
+      onComplete: () => {
+  			document.querySelector(".svg")?.remove();
+  			setShowContent(true);
+			},
     });
   });
 
