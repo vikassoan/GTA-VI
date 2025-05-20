@@ -5,6 +5,14 @@ import "remixicon/fonts/remixicon.css";
 
 function App() {
   let [showContent, setShowContent] = useState(false);
+
+  useEffect(() => {
+    const char = document.querySelector(".character");
+    if (char) {
+      char.style.bottom = "-150%";
+    }
+  }, []);
+  
   useGSAP(() => {
     const tl = gsap.timeline();
 
@@ -54,14 +62,15 @@ function App() {
     });
 
     gsap.to(".character", {
-      scale: .8,
+      scale: 0.8,
       x: "-50%",
-      bottom: "-40%",
+      bottom: "-40%", // <- This brings it into view smoothly
       rotate: 0,
       duration: 2,
-      delay: "-.8",
+      delay: "-0.8",
       ease: "Expo.easeInOut",
     });
+
 
     gsap.to(".text", {
       scale: 1,
@@ -151,10 +160,14 @@ function App() {
                 <h1 className="text-[10rem] leading-none -ml-30">auto</h1>
               </div>
               <img
-                className="absolute character bottom-[-40%] left-1/2 -translate-x-1/2 scale-[2] rotate-[-10deg]"
-                src="/GTA-VI/girlbg.png"
+                className="absolute character left-1/2 -translate-x-1/2 scale-[3] rotate-[-20deg]"
+                src="/girlbg.png"
                 alt=""
+                style={{
+                  bottom: "-150%",
+                }}
               />
+
             </div>
             <div className="btmbar text-white absolute bottom-0 left-0 w-full py-15 px-10 bg-gradient-to-t from-black to-transparent">
               <div className="flex gap-4 items-center">
