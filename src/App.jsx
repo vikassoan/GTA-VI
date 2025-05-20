@@ -37,6 +37,12 @@ function App() {
   useGSAP(() => {
     if (!showContent) return;
 
+    gsap.set(".character", {
+      bottom: "-150%",
+      scale: 3,
+      rotate: -20,
+    });
+
     gsap.to(".main", {
       scale: 1,
       rotate: 0,
@@ -60,7 +66,7 @@ function App() {
       delay: "-.8",
       ease: "Expo.easeInOut",
     });
-
+    
     gsap.to(".character", {
       scale: 0.8,
       x: "-50%",
@@ -159,13 +165,10 @@ function App() {
                 <h1 className="text-[10rem] leading-none ml-10">theft</h1>
                 <h1 className="text-[10rem] leading-none -ml-30">auto</h1>
               </div>
-              <img
-                className="absolute character left-1/2 -translate-x-1/2 scale-[3] rotate-[-20deg]"
+              <img 
+                className="absolute character left-1/2 -translate-x-1/2"
                 src="/girlbg.png"
                 alt=""
-                style={{
-                  bottom: "-150%",
-                }}
               />
 
             </div>
